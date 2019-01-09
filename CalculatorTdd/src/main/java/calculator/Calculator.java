@@ -31,4 +31,8 @@ public class Calculator {
 		
 	}
 
+	public Double median() {
+		return values.get((int)Math.ceil(values.size()/2));
+	}
+
 }

@@ -38,6 +38,19 @@ class TestCalculator {
 		
 	}
 	
+	@Test
+	void testMedian() {
+		
+		Calculator calculator = new Calculator();
+		
+		calculator.add(1.0);
+		calculator.add(2.0);
+		calculator.add(1000.0);
+		
+		assertEquals(2.0, calculator.median(), 0.01);
+		
+	}
+	
 	
 
 }
