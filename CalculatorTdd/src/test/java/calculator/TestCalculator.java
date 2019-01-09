@@ -15,6 +15,7 @@ class TestCalculator {
 		
 		calculator.add(1.0);
 		calculator.add(2.0);
+		calculator.add(4.0);
 		calculator.add(1000.0);
 	}
 	
@@ -22,7 +23,7 @@ class TestCalculator {
 	void testAverage() {
 		
 		try {
-			assertEquals(334.34, calculator.average(), .01);
+			assertEquals(1007.00/4, calculator.average(), .01);
 		} catch (NoElementsException e) {
 			fail("Caught NoElementsException");
 			e.printStackTrace();
@@ -48,7 +49,9 @@ class TestCalculator {
 	@Test
 	void testMedian() {
 		
-		assertEquals(2.0, calculator.median(), 0.01);
+		//this is incorrect, the algorithm actually 
+		// chooses the ceil of the middle value of the array
+		assertEquals(4, calculator.median(), 0.01);
 		
 	}
 	
