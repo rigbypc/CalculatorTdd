@@ -15,8 +15,12 @@ public class Calculator {
 		
 	}
 	
-	public Double average() {
+	public Double average() throws NoElementsException {
 		Double total = 0.0;
+		
+		if(values.isEmpty()) {
+			throw new NoElementsException();
+		}
 		
 		for (Double value : values) {
 			total += value;
